@@ -130,13 +130,7 @@ public class MainActivity extends FlutterActivity {
 
     public void usbConnectChange(UsbConnectState state) {
         methodChannel.invokeMethod("callMe", state.toString());
-//        if (state == UsbConnectState.DISCONNECTED) {
-//            if (requestButton != null) requestButton.setVisibility(View.INVISIBLE);
-////            if (fab != null) fab.hide();
-//        } else if (state == UsbConnectState.CONNECT) {
-//            if (requestButton != null) requestButton.setVisibility(View.VISIBLE);
-//
-//        }
+
 
     }
 
@@ -180,32 +174,7 @@ public class MainActivity extends FlutterActivity {
 
 
 
-//        portSelect = (TextView) findViewById(R.id.textViewTitle);
-//        display = (TextView) findViewById(R.id.textView1);
-//        fab = findViewById(R.id.fab);
-//        requestButton = (Button) findViewById(R.id.buttonRequest);
-                                                                                                                     // On click Request
-//        requestButton.setOnClickListener(view -> {
-//            Map.Entry<String, UsbDevice> entry = usbSerialManager.getUsbDeviceList().entrySet().iterator().next();
-//            String keySelect = entry.getKey();
-//            boolean hasPem = checkDevicePermission(keySelect);
-//            if (hasPem) {
-////                portSelect.setText(keySelect);
-//                deviceKeyName = keySelect;
-////                if (fab != null) fab.show();
-//            } else {
-//                requestDevicePermission(keySelect);
-//            }
-//        });
 
-
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-////                    uploadHex();
-//                new Thread(new UploadRunnable()).start();
-//            }
-//        });
     }
 
 
@@ -359,9 +328,7 @@ public class MainActivity extends FlutterActivity {
 
     }
 
-//    private void logUI(String text) {
-//        runOnUiThread(() -> display.append(text + "\n"));
-//    }
+
 
     private class UploadRunnable implements Runnable {
         @Override
@@ -370,26 +337,7 @@ public class MainActivity extends FlutterActivity {
         }
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-//        return true;
-//    }
 
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
 
 
 
